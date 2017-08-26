@@ -1,0 +1,11 @@
+<a><%= link_to "home", albums_path %></a>
+<div class="actual-name" style="font-size: 20px;">
+  <p>BAND:</p> <a><%= Band.find(@album.band_id).name %></a><br>
+  <p>TITLE:</p> <a><%= @album.title %></a><br>
+  <p>YEAR:</p> <a><%= @album.year %></a><br>
+  <p>TYPE:</p> <a><%= @album.recording_type %></a><br>
+</div>
+<ul class="options-album">
+  <li><%= link_to "update", edit_album_path(@album), method: :patch %></li>
+  <li><%= link_to "delete", album_url(@album), method: :delete %></li>
+</ul>

@@ -1,0 +1,28 @@
+<a><%= link_to "home", albums_path %></a>
+<div class="actual-name" style="font-size: 20px;">
+  <p>ALBUM:</p> <a><%= Album.find(@track.album_id).title %></a><br>
+  <p>TITLE:</p> <a><%= @track.title %></a><br>
+  <p>YEAR:</p> <a><%= @track.ord %></a><br>
+  <p>TYPE:</p> <a><%= @track.reg_or_bonus %></a><br>
+  <p>LYRICS:</p>
+    <a>
+      <% ugly_lyrics(@track.lyrics).each do |line| %>
+        <%= line %><br>
+      <% end %>
+    </a><br>
+</div>
+<% unless Note.where(track_id: @track.id).empty? %>
+  <ul class="notes-list">
+    <% Note.where(track_id: @track.id).each do |note| %>
+      <p class="user-email"><%= User.find(note.user_id).email %>:</p>
+      <p><%= note.text_note %></p>
+      <% if note.user_id == current_user.id %>
+        <%= link_to "delete", note_url(note), method: :delete %>
+      <% end %>
+    <% end %>
+  </ul>
+<% end %>
+<ul class="options-track">
+  <li><%= link_to "update", edit_track_path(@track) %></li>
+  <li><%= link_to "delete", track_url(@track), method: :destroy %></li>
+</ul>

@@ -37,8 +37,13 @@ class User < ApplicationRecord
   end
 
   def reset_session_token!
-    self.session_token = generate_unique_token_for_field(:session_token)
+    self.session_token = SecureRandom.urlsafe_base64
     self.save!
     self.session_token
   end
+
+  has_many :notes,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Note
 end

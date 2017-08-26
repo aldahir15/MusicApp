@@ -1,0 +1,9 @@
+/* line 5, /Users/aldahir/Desktop/aA/MusicApp/app/assets/stylesheets/users.scss */
+.users-list {
+  display: flex;
+}
+
+/* line 9, /Users/aldahir/Desktop/aA/MusicApp/app/assets/stylesheets/users.scss */
+.users-list a {
+  padding: 0 10px;
+}

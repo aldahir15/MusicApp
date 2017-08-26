@@ -1,0 +1,27 @@
+<% unless flash[:errors].nil? %>
+  <% flash[:errors].each do |error| %>
+    <ul>
+      <%= error %>
+    </ul>
+    <% end %>
+<% end %>
+
+<form action="<%= notes_url %>" method="post">
+  <input
+  type="hidden"
+  name="authenticity_token"
+  value="<%= form_authenticity_token %>">
+
+  <input id="title" type="hidden" name="note[user_id]" value=<%="#{current_user.id}"%>>
+  <label for="Track">Track: </label>
+  <select name="note[track_id]">
+    <% Track.all.each do |track| %>
+      <option value="<%=track.id%>"><%=track.title%></option>
+    <% end %>
+  </select>
+  <br>
+  <label for="text">Name: </label>
+  <textarea id="text" type="text" name="note[text_note]"></textarea>
+  <br>
+  <input type="submit" value="submit">
+</form>

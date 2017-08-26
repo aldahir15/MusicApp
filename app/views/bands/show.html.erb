@@ -1,0 +1,11 @@
+<a><%= link_to "home", bands_path %></a>
+<div class="actual-name">
+  <a><%= @band.name %></a>
+</div>
+<% @band.albums.each do |album| %>
+  <%= album.title %><br>
+<% end %>
+<ul class="options-band">
+  <li><%= link_to "update", edit_band_path(@band) %></li>
+  <li><%= link_to "delete", band_url(@band), method: :destroy %></li>
+</ul>

@@ -1,0 +1,39 @@
+/* line 4, /Users/aldahir/Desktop/aA/MusicApp/app/assets/stylesheets/bands.scss */
+.band_indx {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 8, /Users/aldahir/Desktop/aA/MusicApp/app/assets/stylesheets/bands.scss */
+ul {
+  padding: 5px;
+}
+
+/* line 12, /Users/aldahir/Desktop/aA/MusicApp/app/assets/stylesheets/bands.scss */
+.actual-name {
+  padding: 20px;
+  font-size: 40px;
+}
+
+/* line 17, /Users/aldahir/Desktop/aA/MusicApp/app/assets/stylesheets/bands.scss */
+.actual-name a:hover {
+  text-decoration: none;
+  cursor: auto;
+}
+
+/* line 22, /Users/aldahir/Desktop/aA/MusicApp/app/assets/stylesheets/bands.scss */
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* line 27, /Users/aldahir/Desktop/aA/MusicApp/app/assets/stylesheets/bands.scss */
+.options-band {
+  display: flex;
+  list-style-type: none;
+}
+
+/* line 32, /Users/aldahir/Desktop/aA/MusicApp/app/assets/stylesheets/bands.scss */
+.options-band li {
+  padding: 0 15px;
+}

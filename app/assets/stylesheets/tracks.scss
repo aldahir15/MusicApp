@@ -1,0 +1,26 @@
+// Place all the styles related to the Tracks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  color: black;
+  border-radius: 15px;
+  width: 40%
+}
+
+.user-email {
+  color: #8b0000;
+  padding-right: 10px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+ul li {
+  padding: 0 10px;
+}

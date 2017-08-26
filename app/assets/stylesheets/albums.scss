@@ -1,0 +1,25 @@
+// Place all the styles related to the Albums controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.album-indx {
+  color: black;
+}
+
+.album-indx ul {
+  list-style-type: none;
+}
+
+.options-album {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.options-album li {
+  padding: 0 5px;
+}
+
+
+.actual-name p {
+  color: black;
+}

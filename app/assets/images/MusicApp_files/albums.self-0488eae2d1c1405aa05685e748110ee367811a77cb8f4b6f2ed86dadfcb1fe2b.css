@@ -1,0 +1,26 @@
+/* line 4, /Users/aldahir/Desktop/aA/MusicApp/app/assets/stylesheets/albums.scss */
+.album-indx {
+  color: black;
+}
+
+/* line 8, /Users/aldahir/Desktop/aA/MusicApp/app/assets/stylesheets/albums.scss */
+.album-indx ul {
+  list-style-type: none;
+}
+
+/* line 12, /Users/aldahir/Desktop/aA/MusicApp/app/assets/stylesheets/albums.scss */
+.options-album {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+/* line 18, /Users/aldahir/Desktop/aA/MusicApp/app/assets/stylesheets/albums.scss */
+.options-album li {
+  padding: 0 5px;
+}
+
+/* line 23, /Users/aldahir/Desktop/aA/MusicApp/app/assets/stylesheets/albums.scss */
+.actual-name p {
+  color: black;
+}

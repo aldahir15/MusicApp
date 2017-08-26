@@ -1,0 +1,34 @@
+// Place all the styles related to the Bands controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.band_indx {
+  display: flex;
+  flex-direction: column;
+}
+ul {
+  padding: 5px;
+}
+
+.actual-name {
+  padding: 20px;
+  font-size: 40px;
+}
+
+.actual-name a:hover {
+  text-decoration: none;
+  cursor: auto;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.options-band {
+  display: flex;
+  list-style-type: none;
+}
+
+.options-band li {
+  padding: 0 15px;
+}

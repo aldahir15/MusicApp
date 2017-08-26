@@ -9,6 +9,26 @@
   </head>
 
   <body>
+    <header>
+      <h2>
+        <div='img-logo'>
+          <%= image_tag("logo.jpg", height: '120', width: '120') %>
+        </div>
+        <% if current_user %>
+          <form class='button_to' method='post' action='/session' data-remote='true'>
+             <input name='_method' value='delete' type='hidden' />
+             <input value='Log Out' type='submit' data-disable-with='loading...' data-confirm='Are you sure?' />
+             <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"/>
+          </form>
+        <% end %>
+      </h2>
+      <ul class="layout-list">
+        <a><%= link_to "Check Out Bands", bands_path %></a>
+        <a><%= link_to "Check Out Albums", albums_path %></a>
+        <a><%= link_to "Check Out Tracks", tracks_path %></a>
+      <ul>
+    </header>
     <%= yield %>
   </body>
+
 </html>

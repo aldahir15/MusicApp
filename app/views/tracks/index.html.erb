@@ -1,0 +1,10 @@
+<div class="track-indx">
+  <% @tracks.each do |track| %>
+    <ul>
+      <li>
+        <%= track.album.title %><br>
+        <%= link_to track.title, track_path(track) %>
+      </li> <br>
+    </ul>
+  <% end %>
+</div>

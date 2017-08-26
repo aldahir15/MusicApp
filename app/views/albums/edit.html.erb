@@ -1,0 +1,22 @@
+<form action="<%= album_url %>" method="post">
+  <input type="hidden" name="_method", value="PATCH">
+
+  <label for="Band">Band: </label>
+  <select name="album[band_id]">
+    <% Band.all.each do |band| %>
+      <option value="<%=band.id%>" <%= @album.band_id == band.id ? "selected" : "" %>><%=band.name%></option>
+    <% end %>
+  </select>
+  <br>
+  <label for="title">Name: </label>
+  <input id="title" type="text" name="album[title]" value="<%= @album.title %>">
+  <br>
+  <label for="year">Year: </label>
+  <input id="year" type="number" name="album[year]" value="<%= @album.year %>">
+  <br>
+  <input type="radio" name="album[recording_type]" value="Studio" <%= @album.recording_type == "Studio" ? "checked" : "" %> > Studio<br>
+  <input type="radio" name="album[recording_type]" value="Live" <%= @album.recording_type == "Live" ? "checked" : "" %> > Live<br>
+  <br>
+  <input type="submit" value="submit">
+
+</form>
